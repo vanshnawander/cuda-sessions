@@ -1,12 +1,32 @@
-These are example CUDA kernels. 
-you can them using NVCC compiler, make you sure you have nvcc setup properly:
+# CUDA Sessions
 
+This repository contains CUDA learning materials and example kernels for getting started with NVIDIA CUDA programming. It provides a progression from basic CUDA concepts to optimized implementations.
+
+## Repository Structure
+
+- `cuda-intro/`: Introductory CUDA examples covering basic kernels, memory management, and simple algorithms.
+- `matmul-basic/`: matrix multiplication implementations demonstrating optimization techniques like tiling.
+
+## Prerequisites
+
+- NVIDIA GPU with CUDA support
+- NVCC compiler installed (part of CUDA Toolkit)
+- stb_image.h and stb_image_write.h headers (included in the repo for image processing examples)
+
+## How to Compile and Run CUDA Files
+
+Compile a CUDA file using NVCC:
+
+```
 nvcc filename.cu -o outputfile
+./outputfile
+```
 
-for example:
+For example:
+
+```
 nvcc SimpleMatrixMultiplication.cu -o SimpleMatrixMultiplication
-
-then run the output file:
 ./SimpleMatrixMultiplication
+```
 
-note: make sure you have the stb_image.h and stb_image_write.h files in the same directory as the ImageGray.cu file. These are header files for image processing. I have added them in the repo itself. 
+Note: Ensure the stb_image headers are in the same directory as files like `ImageGray.cu` that use them.
