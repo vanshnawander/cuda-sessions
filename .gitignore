@@ -1,4 +1,9 @@
 *.exe
 *.exp
 *.lib
-*.txt
+*.txt# pixi environments
+.pixi/*
+!.pixi/config.toml
+pixi.lock
+*.out
+
